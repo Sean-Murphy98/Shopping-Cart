@@ -1,0 +1,57 @@
+.navContainer {
+  opacity: 1;
+  background-color: #f3f3f3;
+  display: flex;
+  position: sticky;
+  margin: 0;
+  top: 0;
+  margin-left: 20px;
+  justify-content: space-between;
+  z-index: 100;
+  padding: 0px 10px;
+}
+
+.navBrand {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  gap: 15px;
+}
+
+.navBrand {
+  font-size: 2rem;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-color: #f3f3f3;
+}
+
+ul > * {
+  flex: 1;
+  align-items: center;
+}
+
+ul li {
+  list-style: none;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+ul li a {
+  display: block;
+  color: #666666;
+  text-decoration: none;
+}
+
+ul li:not(:has(.active)) a:hover {
+  background-color: #dddddd;
+}
+
+ul li:has(.active) {
+  background-color: #04aa6d;
+}

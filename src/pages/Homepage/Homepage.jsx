@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../../App.css";
-import NavBar from "../../components/NavBar.jsx";
+import ImageCarousel from "../../components/ImageCarousel/ImageCarousel.jsx";
 
 function Homepage() {
   const [count, setCount] = useState(0);
@@ -8,6 +8,7 @@ function Homepage() {
   return (
     <div className="main">
       <h1>Vite + React</h1>
+      <ImageCarousel />
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./NavBar.css";
 import { ShoppingCart, Shirt } from "lucide-react";
 import { NavLink } from "react-router";

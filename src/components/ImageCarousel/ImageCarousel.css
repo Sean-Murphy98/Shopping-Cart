@@ -1,22 +1,59 @@
-img.visible {
-  display: block;
-  object-fit: cover;
-  max-width: 300px;
-  max-height: 800px;
-}
-
-img.center {
-  box-shadow:
-    0 15px 20px rgba(0, 0, 0, 0.5),
-    0 6px 6px rgba(0, 0, 0, 0.4);
-}
-
-/* Slideshow container */
 .carousel {
-  max-width: 1000px;
   position: relative;
-  margin: auto;
-  --button-icon-color: #3f3f3f;
+  width: 550px;
+  height: 550px;
+  margin: 40px auto;
+}
+.viewport {
+  position: relative;
+  height: 550px;
+  overflow: hidden;
+}
+
+.track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  transform: translate(-50%, -50%);
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+  opacity: 0;
+}
+
+/* CENTER */
+.slide.center {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  z-index: 3;
+}
+
+/* LEFT */
+.slide.left {
+  transform: translate(calc(-150% - 8px), -50%) scale(0.85);
+  opacity: 0.6;
+  z-index: 2;
+}
+
+/* RIGHT */
+.slide.right {
+  transform: translate(calc(50% + 8px), -50%) scale(0.85);
+  opacity: 0.6;
+  z-index: 2;
+}
+
+/* HIDDEN */
+.slide.hidden {
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .prev,
@@ -39,57 +76,29 @@ img.center {
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
-  color: var(--button-icon-color);
 }
 .prev {
   left: 0;
   border-radius: 0px 3px 3px 0;
-  color: var(--button-icon-color);
 }
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
-/* The dots/bullets/indicators */
+.dots {
+  text-align: center;
+  margin-top: 10px;
+}
 .dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
+  height: 10px;
+  width: 10px;
+  background: #bbb;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
-}
-.dot.active,
-.dot:hover {
-  background-color: #717171;
-}
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 0.8s;
+  margin: 0 4px;
 }
 
-.imgContainer {
-  mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 20%,
-    black 80%,
-    transparent
-  );
-  display: flex;
-  gap: 6px;
-  padding: 4px;
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.2;
-  }
-  to {
-    opacity: 1;
-  }
+.dot.active {
+  background: #333;
 }

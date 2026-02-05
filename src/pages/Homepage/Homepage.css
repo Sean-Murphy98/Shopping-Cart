@@ -1,0 +1,11 @@
+.social-icon {
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}

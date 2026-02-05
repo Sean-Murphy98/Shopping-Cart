@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../../App.css";
+import "./Homepage.css";
 import ImageCarousel from "../../components/ImageCarousel/ImageCarousel.jsx";
 
 function Homepage() {
@@ -7,18 +7,31 @@ function Homepage() {
 
   return (
     <div className="main">
-      <h1>Vite + React</h1>
+      <h1>Shop the latest trends</h1>
       <ImageCarousel />
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR but home
-        </p>
+        <div className="social-icons">
+          <a
+            class="social-icon"
+            href="https://github.com/Sean-Murphy98"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
+          </a>
+          <a
+            className="social-icon"
+            href="https://www.linkedin.com/in/sean-murphy-077a12215/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-plain.svg" />
+          </a>
+        </div>
       </div>
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+        All clothing is designed, printed & embroidered in our workshop in Naas,
+        Co. Kildare.
       </p>
     </div>
   );

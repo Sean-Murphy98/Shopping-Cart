@@ -1,0 +1,25 @@
+.quantityControl {
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  width: 60%;
+  border-radius: 20px;
+  border: 2px solid #e8ebef;
+}
+
+.quantityInput {
+  flex: 1;
+  border: none;
+  text-align: right;
+}
+
+.btn {
+  flex: 0.1;
+  font-size: 1em;
+  font-weight: 700;
+  background-color: #e8ebef;
+  border: none;
+}
+
+.btn:hover {
+}

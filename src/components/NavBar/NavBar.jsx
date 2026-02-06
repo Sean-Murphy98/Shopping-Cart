@@ -33,7 +33,7 @@ function NavBar({ count }) {
               className={({ isActive }) => (isActive ? "active" : "")}
             >
               <ShoppingCart />
-              {count}
+              {count > 99 ? "99+" : count > 0 ? count : ""}
             </NavLink>
           </li>
         </ul>

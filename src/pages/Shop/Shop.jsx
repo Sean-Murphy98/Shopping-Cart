@@ -29,7 +29,7 @@ function Shop() {
 
   return (
     <div className="shop">
-      <h1>Vite + React</h1>
+      <h1>Our Products</h1>
       {data ? (
         <div className="shop-items">
           {data.map((item) => (

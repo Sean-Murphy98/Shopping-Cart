@@ -1,0 +1,13 @@
+.cartItems {
+  display: grid;
+  grid-auto-rows: 200px;
+  min-height: 80vh;
+  gap: 10px;
+  padding: 5px;
+}
+
+.cart {
+  padding: 0px 10px;
+  max-width: 1250px;
+  margin: 0 auto;
+}

@@ -10,6 +10,8 @@
   z-index: 100;
   padding: 0px 10px;
   border-radius: 5px;
+  height: 70px;
+  align-items: center;
 }
 
 .navBrand {
@@ -24,23 +26,31 @@
   font-size: 2rem;
 }
 
+.navBar {
+  height: 100%;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   display: flex;
   background-color: #f3f3f3;
+  height: 100%;
 }
 
 ul > * {
   flex: 1;
   align-items: center;
+  height: 100%;
 }
 
 ul li {
   list-style: none;
-  padding: 16px;
+  padding: 18px;
   box-sizing: border-box;
+  text-align: center;
+  display: flex;
 }
 
 ul li a {

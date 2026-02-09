@@ -1,23 +1,24 @@
 import { useState } from "react";
-import "../../App.css";
+import { useOutletContext } from "react-router";
+import CartItem from "../../components/CartItem/CartItem.jsx";
+import "./Cart.css";
 
 function Cart() {
   const [count, setCount] = useState(0);
+  const [cartItems] = useOutletContext();
 
   return (
-    <div className="main">
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR but cart
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <div className="cart">
+      <h1>Your Cart</h1>
+      {cartItems.length > 0 ? (
+        <div className="cartItems">
+          {cartItems.map((item) => (
+            <CartItem key={item.id} item={item} />
+          ))}
+        </div>
+      ) : (
+        <p>Your cart is empty.</p>
+      )}
     </div>
   );
 }

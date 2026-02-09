@@ -2,9 +2,10 @@
   display: flex;
   justify-content: center;
   justify-self: center;
-  width: 60%;
+  width: var(--quantityControlWidth);
   border-radius: 20px;
   border: 2px solid #e8ebef;
+  max-height: 100px;
 }
 
 .quantityInput {

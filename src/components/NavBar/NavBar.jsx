@@ -11,7 +11,7 @@ function NavBar({ count }) {
       </div>
       <nav className="navBar">
         <ul>
-          <li className="active">
+          <li>
             <NavLink
               to="/"
               className={({ isActive }) => (isActive ? "active" : "")}
